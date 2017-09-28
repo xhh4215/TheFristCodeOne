@@ -7,10 +7,13 @@ import android.view.View;
 import android.widget.TextClock;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     TextClock textClock;//一个显示当前的时间的控件
+    public String text="this is the frist code";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +24,11 @@ public class MainActivity extends AppCompatActivity {
         textClock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "现在的时间是"+textClock.getText(), Toast.LENGTH_SHORT).show();
+                Gson gson = new Gson();
+               String jsontext =  gson.toJson(text);
+                Toast.makeText(MainActivity.this, jsontext+"现在的时间是"+textClock.getText(), Toast.LENGTH_SHORT).show();
+
+
             }
         });
     }
