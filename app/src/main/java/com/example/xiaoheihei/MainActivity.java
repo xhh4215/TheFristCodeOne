@@ -3,7 +3,9 @@ package com.example.xiaoheihei;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextClock;
 import android.widget.Toast;
 
@@ -21,13 +23,16 @@ public class MainActivity extends AppCompatActivity {
         textClock = (TextClock) findViewById(R.id.textcolock);
         textClock.setTextColor(Color.BLACK);
         textClock.setTextSize(23);
+        WindowManager wm = this.getWindowManager();
+        final int width = wm.getDefaultDisplay().getWidth();
+        final int height = wm.getDefaultDisplay().getHeight();
         textClock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Gson gson = new Gson();
                String jsontext =  gson.toJson(text);
-                Toast.makeText(MainActivity.this, jsontext+"现在的时间是"+textClock.getText(), Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(MainActivity.this, jsontext+"现在的时间是"+width+height, Toast.LENGTH_SHORT).show();
+                Log.d("MainActivity","你点击了显示时间的按钮®");
 
             }
         });

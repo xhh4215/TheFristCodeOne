@@ -1,11 +1,19 @@
+//com.android.application 表明是一个应用程序模块
+//com.android.library 表明是一个库模块
 apply plugin: 'com.android.application'
 
 android {
+    //指定项目的编译的版本
     compileSdkVersion 26
+    //指定的是构建的工具的版本
     buildToolsVersion "26.0.0"
+    //对项目的更多的细节的配置
     defaultConfig {
+        //用来指定应用程序的包名
         applicationId "com.example.xiaoheihei"
+        //指定项目的最低兼容的版本
         minSdkVersion 17
+        //用来标示说明你已经对该程序做了充分的测试  系统会为你分配最新的功能
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
