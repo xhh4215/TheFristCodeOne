@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
+        </activity>
+        <!--标题蓝显示的字符串-->
+        <activity android:name=".FristActivity"
+            android:label="小黑">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
