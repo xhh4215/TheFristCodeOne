@@ -19,10 +19,11 @@
         <!-- 标题蓝显示的字符串 -->
         <activity
             android:name=".FristActivity"
-            android:label="小黑">
+            android:label="小黑"></activity>
+        <activity android:name=".SecondActivity">
 
         </activity>
-        <activity android:name=".SecondActivity">
+        <activity android:name=".ThridActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
