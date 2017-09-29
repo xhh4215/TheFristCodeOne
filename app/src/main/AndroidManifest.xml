@@ -10,10 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="com.example.xiaoheihei.ACTION_START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
 
         </activity>
         <!--标题蓝显示的字符串-->
-        <activity android:name=".FristActivity"
+        <activity
+            android:name=".FristActivity"
             android:label="小黑">
 
             <intent-filter>
