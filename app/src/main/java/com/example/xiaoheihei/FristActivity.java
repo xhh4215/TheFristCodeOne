@@ -40,13 +40,17 @@ public class FristActivity extends AppCompatActivity {
 //                //可以通过在intent-falter中设置data的数值只有当前的data和标签中的匹配才会进行跳转
 //                intent.setData(Uri.parse("http://www.baidu.com"));
 //                startActivity(intent);
-                /**
-                 * 使用intent进行数据的传输
-                 */
-                String name = "xiaoheihei";
-                Intent intent = new Intent(FristActivity.this, MainActivity.class);
-                intent.putExtra("name", name);
-                startActivity(intent);
+//                  /**
+//                   * 使用intent进行数据的传输
+//                   */
+//                   String name = "xiaoheihei";
+//                   Intent intent = new Intent(FristActivity.this, MainActivity.class);
+//                   intent.putExtra("name", name);
+//                   startActivity(intent);
+                Intent intent = getIntent();
+                intent.putExtra("name","返回的数据是小黑黑");
+                setResult(9,intent);
+                finish();
 
             }
         });
